@@ -1,0 +1,22 @@
+{
+  "name": "event-registration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "index"
+  },
+  "keywords": [
+    "ejs",
+    "node",
+    "nodemon"
+  ],
+  "author": "Audrey Geehan",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.4"
+  }
+}

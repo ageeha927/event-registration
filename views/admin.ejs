@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+</head>
+<body>
+    <ul>
+        <%people.forEach(function(person) { %>
+        <li>
+            <strong><% person.first_name+" "+person.last_name %></strong>
+            <em>Email</em> <%=person.email %> <br>
+            <em>Gender</em> <%= person.gender %>
+            <em>DOB</em> <%= person.DOB %>
+        </li>
+        <% }); %>
+    </ul>
+    <footer>
+    </footer>
+</body>
+</html>
