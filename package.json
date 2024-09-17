@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "index"
+    "dev": "nodemon app.js"
   },
   "keywords": [
     "ejs",
@@ -16,7 +16,9 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.0",
-    "fs": "^0.0.1-security",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.4"
   }
 }

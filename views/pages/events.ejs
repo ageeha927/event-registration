@@ -23,6 +23,12 @@
                     <em>Description:</em> <%= event.description %>
                 </li>
             </ul>
+            <div class="task-buttons">
+                <button class="edit-button"><a href="/edit/<%= event.id %>/edit">Edit</a></button>
+                <form action="/edit/<%= event.id %>/delete" method="POST" style="display:inline;">
+                    <button class="delete-button" type="submit">Delete</button>
+                </form>
+            </div>
             <% }); %>
         </div>
     </main>
