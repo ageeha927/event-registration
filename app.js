@@ -19,9 +19,16 @@ app.get('/', function(req, res) {
         events})
 })
 
-// admin page
-app.get('/admin', function(req, res){
-    res.render('pages/admin')
+app.get('/home', function(req, res){
+    const events = getEvents()
+    res.render('pages/user',{
+        events})
+})
+
+app.get('/submit', function(req, res){
+    const events = getEvents()
+    res.render('pages/submit',{
+        events})
 })
 
 app.use(bodyParser.urlencoded({ extended: true}))
@@ -90,4 +97,29 @@ app.post('/edit/:id/delete', (req,res)=> {
 //Server
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`)
+})
+
+// Route to handle form submission
+app.post('/submit', (req, res) => {
+    const data = {
+        firstName: req.body.fname,
+        lastName: req.body.lname,
+        email: req.body.email,
+        events: req.body.event 
+    }
+
+    // Read existing data
+    fs.readFile('./data/registered.json', (err, fileData) => {
+        let json = []
+        if (!err) {
+            json = JSON.parse(fileData)
+        }
+        json.push(data)
+        fs.writeFile('./data/registered.json', JSON.stringify(json, null, 2), (err) => {
+            if (err) {
+                return res.status(500).send('Error writing to file')
+            }
+            res.redirect('/submit')
+        })
+    })
 })
