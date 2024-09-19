@@ -19,9 +19,16 @@ app.get('/', function(req, res) {
         events})
 })
 
-// admin page
-app.get('/admin', function(req, res){
-    res.render('pages/admin')
+app.get('/home', function(req, res){
+    const events = getEvents()
+    res.render('pages/user',{
+        events})
+})
+
+app.get('/submit', function(req, res){
+    const events = getEvents()
+    res.render('pages/submit',{
+        events})
 })
 
 app.use(bodyParser.urlencoded({ extended: true}))
@@ -98,7 +105,7 @@ app.post('/submit', (req, res) => {
         firstName: req.body.fname,
         lastName: req.body.lname,
         email: req.body.email,
-        events: req.body.id
+        events: req.body.event 
     }
 
     // Read existing data
