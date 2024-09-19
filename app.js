@@ -105,7 +105,7 @@ app.post('/submit', (req, res) => {
         firstName: req.body.fname,
         lastName: req.body.lname,
         email: req.body.email,
-        events: req.body.event 
+        events: req.body.id
     }
 
     // Read existing data
