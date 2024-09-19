@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
     <header>
@@ -12,17 +13,10 @@
     </header>
     <main>
         <div>
-            <h1>Ongoing Events</h1>
+            <h1 id="ongoing">Ongoing Events</h1>
             <%events.forEach(function(event) { %>
-            <em>Name:</em> <%=event.name %> <br>
-            <ul>
-                <li>
-                    <em>Date:</em> <%= event.date %>
-                </li>
-                <li>
-                    <em>Description:</em> <%= event.description %>
-                </li>
-            </ul>
+            <b>Name:</b> <%=event.name %> <b>|</b> <%= event.date %> <br>
+            <h4><em>Description:</em> <%= event.description %></h4>
             <div class="task-buttons">
                 <button class="edit-button"><a href="/edit/<%= event.id %>/edit">Edit</a></button>
                 <form action="/edit/<%= event.id %>/delete" method="POST" style="display:inline;">
@@ -32,7 +26,7 @@
             <% }); %>
         </div>
     </main>
-    <form action="/action_page.php">
+    <form id="edit" action="/edit" method="POST">
         <fieldset>
             <legend>New Event:</legend>
             <label for="name">Name of Event:</label>

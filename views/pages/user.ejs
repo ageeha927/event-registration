@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
     <header>
@@ -36,7 +37,7 @@
             <input type="email" id="email" name="email" required><br><br>
             <label for="events">Event:</label> <br><br>
             <%events.forEach(function(event) { %> 
-                <input type="checkbox" id="events" name="event1" value="event">
+                <input type="checkbox" id="events" name="event" value="<%=event.name %>">
                 <label for="event"><%=event.name %></label><br><br><br>
             <% }); %>
             <input type="submit" value="Submit">

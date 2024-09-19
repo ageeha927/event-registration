@@ -1,0 +1,40 @@
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#ongoing{
+    display: flex;
+    margin-bottom: 8vh;
+    font-size: 4vw;
+    position: relative;
+    right: 5%;
+}
+
+header{
+    position: relative;
+    left: 40%;
+
+}
+
+div button{
+    position: relative;
+    right: 40%;
+    margin-bottom: 8vh;
+}
+
+div{
+    position: relative;
+    left: 40%;
+}
+
+#edit{
+    box-sizing: border-box;
+    width: 25%;
+    position: relative;
+    left: 70%;
+    bottom: 53vh;
+}
+
+legend{
+    margin-bottom: 2vh;
+}

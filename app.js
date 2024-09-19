@@ -9,6 +9,7 @@ const eventsData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'even
 // set the view to engine ejs
 app.set('view engine', 'ejs')
 
+app.use('/public', express.static('public'))
 
 // use res.render to load up an ejs view file
 
@@ -30,6 +31,7 @@ app.get('/submit', function(req, res){
     res.render('pages/submit',{
         events})
 })
+
 
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static('public'))
@@ -56,13 +58,13 @@ const saveEvents = (events) => {
 //POST: Create a new event
 app.post('/edit', (req,res) => {
     const events = getEvents();
-    const newTask = {
+    const newEvent = {
         id: events.length+1,
         name:req.body.name,
         date:req.body.date,
         description: req.body.description
     }
-    events.push(newTask)
+    events.push(newEvent)
     saveEvents(events)
     res.redirect('/')
 })
@@ -101,11 +103,12 @@ app.listen(PORT, ()=>{
 
 // Route to handle form submission
 app.post('/submit', (req, res) => {
+    console.log(req.body.event)
     const data = {
         firstName: req.body.fname,
         lastName: req.body.lname,
         email: req.body.email,
-        events: req.body.event 
+        event: req.body.event
     }
 
     // Read existing data

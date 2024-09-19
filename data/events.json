@@ -2,13 +2,13 @@
   {
     "id": 2,
     "name": "Movie Day",
-    "date": "10/25/2024",
+    "date": "2024-09-30",
     "description": "Come watch Coraline with us!"
   },
   {
-    "id": 3,
-    "name": "Parent Night",
-    "date": "12/6/2024",
-    "description": "Parents Join your kids for a day!"
+    "id": 2,
+    "name": "Saving Scales",
+    "date": "2024-09-20",
+    "description": "Reptile Volunteer"
   }
 ]

@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "firstName": "Audrey",
+    "lastName": "Geehan",
+    "email": "ageeha927@west-mec.org",
+    "event": [
+      "Movie Day",
+      "Saving Scales"
+    ]
+  },
+  {
+    "firstName": "Audrey",
+    "lastName": "Geehan",
+    "email": "ageeha927@west-mec.org",
+    "event": "Movie Day"
+  }
+]
