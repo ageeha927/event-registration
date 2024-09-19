@@ -90,7 +90,6 @@ app.post('/edit/:id/delete', (req,res)=> {
 //Server
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`)
-<<<<<<< HEAD
 })
 
 // Route to handle form submission
@@ -116,6 +115,4 @@ app.post('/submit', (req, res) => {
             res.redirect('/submit')
         })
     })
-=======
->>>>>>> parent of a6ee393 (.)
 })
