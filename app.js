@@ -19,16 +19,9 @@ app.get('/', function(req, res) {
         events})
 })
 
-app.get('/home', function(req, res){
-    const events = getEvents()
-    res.render('pages/user',{
-        events})
-})
-
-app.get('/submit', function(req, res){
-    const events = getEvents()
-    res.render('pages/submit',{
-        events})
+// admin page
+app.get('/admin', function(req, res){
+    res.render('pages/admin')
 })
 
 app.use(bodyParser.urlencoded({ extended: true}))
@@ -97,6 +90,7 @@ app.post('/edit/:id/delete', (req,res)=> {
 //Server
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`)
+<<<<<<< HEAD
 })
 
 // Route to handle form submission
@@ -122,4 +116,6 @@ app.post('/submit', (req, res) => {
             res.redirect('/submit')
         })
     })
+=======
+>>>>>>> parent of a6ee393 (.)
 })

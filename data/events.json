@@ -1,5 +1,11 @@
 [
   {
+    "id": 1,
+    "name": "Trunk or Treat",
+    "date": "2024-10-30",
+    "description": "A fun spooky fun"
+  },
+  {
     "id": 2,
     "name": "Movie Day",
     "date": "10/25/2024",
