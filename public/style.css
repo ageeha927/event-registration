@@ -1,5 +1,23 @@
 body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(./images/Upcoming\ Events.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: repeat-y;
+}
+
+button a{
+    text-decoration: none;
+    background-color: #cb6ce6;
+    color: aliceblue;
+    border-color: #cb6ce6;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+h4{
+    font-weight: lighter;
 }
 
 #ongoing{
@@ -13,7 +31,29 @@ body {
 header{
     position: relative;
     left: 40%;
+    margin-left: 3%;
+    margin-top: 2%;
+}
 
+header a{
+    margin-right: 5%;
+    text-decoration: none;
+    font-weight: 800;
+    color: black;
+    border-color: black;
+}
+
+#user{
+    margin-left: 6%;
+}
+
+#user-form{
+    box-sizing: border-box;
+    width: 25%;
+    position: relative;
+    left: 36%;
+    bottom: 3vh;
+    top: 3vh;
 }
 
 div button{
@@ -31,10 +71,70 @@ div{
     box-sizing: border-box;
     width: 25%;
     position: relative;
-    left: 70%;
-    bottom: 53vh;
+    left: 36%;
+    bottom: 5vh;
 }
 
 legend{
     margin-bottom: 2vh;
+}
+
+.delete-button{
+    background-color: #ff66c4;
+    color: aliceblue;
+    border-color: #ff66c4;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+.submit{
+    text-decoration: none;
+    background-color: #7ed957;
+    color: aliceblue;
+    border-color: #7ed957;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+.edit-button{
+    background-color: #cb6ce6;
+    color: aliceblue;
+    border-color: #cb6ce6;
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+.submit-page{
+    position: relative;
+    font-size: xx-large;
+    left: 30%;
+    top: 20vh;
+}
+
+.edit-page{
+    overflow: hidden;
+    position: relative;
+    left: 59%;
+    top: 20vh;
+    scale: 1.5;
+}
+
+#update{
+    text-decoration: none;
+    background-color: #7ed957;
+    color: aliceblue;
+    border-color: #7ed957;
+    font-weight: 600;
+    border-radius: 10%;
+    display:inline;
+    position: relative;
+    top: 3vh;
+    right: 6.3vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#back{
+    position: relative;
+    top: .3vh;
+    color: black;
 }

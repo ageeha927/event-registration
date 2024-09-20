@@ -7,26 +7,19 @@
     <link rel="stylesheet" href="/public/style.css">
 </head>
 <body>
-    <header>
-        <a href="/home">Home</a>
+    <header id="user">
+        <a href="/home">HOME</a>
     </header>
     <main>
         <div>
-            <h1>Current Events</h1>
-            <%events.forEach(function(event) { %>
-            <em>Name:</em> <%=event.name %> <br>
-            <ul>
-                <li>
-                    <em>Date:</em> <%= event.date %>
-                </li>
-                <li>
-                    <em>Description:</em> <%= event.description %>
-                </li>
-            </ul>
+            <h1 id="ongoing" >Current Events</h1>
+                <%events.forEach(function(event) { %>
+                <b>Name:</b> <%=event.name %> <b>|</b> <%= event.date %> <br>
+                <h4>Description: <%= event.description %></h4>
             <% }); %>
         </div>
     </main>
-    <form action="/submit" method="POST">
+    <form id="user-form" action="/submit" method="POST">
         <fieldset>
             <legend>Register:</legend>
             <label for="fname">First name:</label>
@@ -40,7 +33,7 @@
                 <input type="checkbox" id="events" name="event" value="<%=event.name %>">
                 <label for="event"><%=event.name %></label><br><br><br>
             <% }); %>
-            <input type="submit" value="Submit">
+            <input class="submit" type="submit" value="Submit">
         </fieldset>
     </form>
 </body>
